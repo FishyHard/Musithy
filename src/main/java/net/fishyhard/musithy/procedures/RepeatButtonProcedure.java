@@ -8,29 +8,23 @@ public class RepeatButtonProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MusithyModVariables.PlayerVariables())).RepeatMusic == 0) {
+		if (entity.getData(MusithyModVariables.PLAYER_VARIABLES).RepeatMusic == 0) {
 			{
-				double _setval = 1;
-				entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.RepeatMusic = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				MusithyModVariables.PlayerVariables _vars = entity.getData(MusithyModVariables.PLAYER_VARIABLES);
+				_vars.RepeatMusic = 1;
+				_vars.syncPlayerVariables(entity);
 			}
-		} else if ((entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MusithyModVariables.PlayerVariables())).RepeatMusic == 1) {
+		} else if (entity.getData(MusithyModVariables.PLAYER_VARIABLES).RepeatMusic == 1) {
 			{
-				double _setval = 2;
-				entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.RepeatMusic = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				MusithyModVariables.PlayerVariables _vars = entity.getData(MusithyModVariables.PLAYER_VARIABLES);
+				_vars.RepeatMusic = 2;
+				_vars.syncPlayerVariables(entity);
 			}
-		} else if ((entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MusithyModVariables.PlayerVariables())).RepeatMusic == 2) {
+		} else if (entity.getData(MusithyModVariables.PLAYER_VARIABLES).RepeatMusic == 2) {
 			{
-				double _setval = 0;
-				entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.RepeatMusic = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				MusithyModVariables.PlayerVariables _vars = entity.getData(MusithyModVariables.PLAYER_VARIABLES);
+				_vars.RepeatMusic = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

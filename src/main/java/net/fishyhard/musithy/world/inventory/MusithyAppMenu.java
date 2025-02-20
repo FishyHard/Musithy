@@ -1,11 +1,11 @@
 
 package net.fishyhard.musithy.world.inventory;
 
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class MusithyAppMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
@@ -44,7 +44,7 @@ public class MusithyAppMenu extends AbstractContainerMenu implements Supplier<Ma
 	public MusithyAppMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(MusithyModMenus.MUSITHY_APP.get(), id);
 		this.entity = inv.player;
-		this.world = inv.player.level;
+		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);
 		BlockPos pos = null;
 		if (extraData != null) {
@@ -85,10 +85,10 @@ public class MusithyAppMenu extends AbstractContainerMenu implements Supplier<Ma
 	}
 
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		Player entity = event.player;
-		if (event.phase == TickEvent.Phase.END && entity.containerMenu instanceof MusithyAppMenu) {
-			Level world = entity.level;
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof MusithyAppMenu) {
+			Level world = entity.level();
 			double x = entity.getX();
 			double y = entity.getY();
 			double z = entity.getZ();

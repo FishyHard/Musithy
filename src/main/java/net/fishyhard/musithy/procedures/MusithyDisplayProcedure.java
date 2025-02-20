@@ -8,7 +8,7 @@ public class MusithyDisplayProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MusithyModVariables.PlayerVariables())).MusithyApp == 0) {
+		if (entity.getData(MusithyModVariables.PLAYER_VARIABLES).MusithyApp == 0) {
 			return true;
 		}
 		return false;

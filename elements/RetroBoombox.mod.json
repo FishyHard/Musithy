@@ -1,15 +1,28 @@
 {
-  "_fv": 47,
+  "_fv": 73,
   "_type": "livingentity",
   "definition": {
     "mobName": "Retro Boombox",
     "mobLabel": "",
     "mobModelName": "ModelBoombox",
     "mobModelTexture": "boombox.png",
-    "mobModelGlowTexture": "",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
+    "animations": [],
     "modelWidth": 0.7,
     "modelHeight": 0.7,
     "modelShadowSize": 0.0,
@@ -23,9 +36,7 @@
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -56,12 +67,17 @@
     "stepHeight": 0.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 16,
+    "followRange": 0,
     "health": 20,
     "xpAmount": 0,
     "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": true,
@@ -96,12 +112,16 @@
     "stepSound": {
       "value": ""
     },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [],
     "onRightClickedOn": {
       "name": "RetroBoomboxRightClickedOnEntity"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"java_code\"><field name=\"CODE\">/*code*/</field></block></next></block></xml>",
     "breedable": true,
     "tameable": true,
     "breedTriggerItems": [],
@@ -119,6 +139,15 @@
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
-    "spawnInDungeons": false
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ]
   }
 }

@@ -8,9 +8,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -18,7 +18,6 @@ import net.fishyhard.musithy.init.MusithyModItems;
 import net.fishyhard.musithy.init.MusithyModEntities;
 import net.fishyhard.musithy.entity.RetroBoomboxEntity;
 
-import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
 
@@ -32,29 +31,28 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 			if ((entity.getPersistentData().getString("Music")).equals("G")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:g");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:g");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_G.get()));
@@ -70,35 +68,34 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 			if ((entity.getPersistentData().getString("Music")).equals("EnterThePortal")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:enter_the_portal");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:enter_the_portal");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_ENTER_THE_PORTAL.get()));
@@ -114,35 +111,34 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 			if ((entity.getPersistentData().getString("Music")).equals("DetermineYourFate")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:determine_your_fate");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:determine_your_fate");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_DETERMINE_YOUR_FATE.get()));
@@ -158,35 +154,34 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 			if ((entity.getPersistentData().getString("Music")).equals("MeetTheConductor")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:meet_the_conductor");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:meet_the_conductor");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_MEET_THE_CONDUCTOR.get()));
@@ -202,35 +197,34 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 			if ((entity.getPersistentData().getString("Music")).equals("Sundial3")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:sundial_3");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:sundial_3");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_SUNDIAL_3.get()));
@@ -246,35 +240,34 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 			if ((entity.getPersistentData().getString("Music")).equals("Sundial4")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-							.collect(Collectors.toList());
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (entityiterator instanceof Player) {
 							{
 								Entity _ent = entityiterator;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-											_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "/stopsound @a record musithy:sundial_4");
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/stopsound @a record musithy:sundial_4");
 								}
 							}
 						}
 					}
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new RetroBoomboxEntity(MusithyModEntities.RETRO_BOOMBOX.get(), _level);
-					entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
-					entityToSpawn.setYBodyRot(entity.getYRot());
-					entityToSpawn.setYHeadRot(entity.getYRot());
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					_level.addFreshEntity(entityToSpawn);
+					Entity entityToSpawn = MusithyModEntities.RETRO_BOOMBOX.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(entity.getYRot());
+						entityToSpawn.setYBodyRot(entity.getYRot());
+						entityToSpawn.setYHeadRot(entity.getYRot());
+						entityToSpawn.setXRot(entity.getXRot());
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
 				}
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MusithyModItems.CASSETTE_TAPE_SUNDIAL_4.get()));
@@ -290,7 +283,7 @@ public class RetroBoomboxPlayRightClickedOnEntityProcedure {
 					if (retroboombox instanceof TamableAnimal _toTame && sourceentity instanceof Player _owner)
 						_toTame.tame(_owner);
 				}
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 		}

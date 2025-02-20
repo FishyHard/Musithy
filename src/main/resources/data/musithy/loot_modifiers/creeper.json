@@ -1,10 +1,10 @@
 {
-  "type": "musithy:musithy_loot_modifier",
+  "type": "neoforge:add_table",
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
+      "condition": "neoforge:loot_table_id",
       "loot_table_id": "minecraft:entities/creeper"
     }
   ],
-  "lootTable": "musithy:entities/cassette_tapes"
+  "table": "musithy:entities/cassette_tapes"
 }

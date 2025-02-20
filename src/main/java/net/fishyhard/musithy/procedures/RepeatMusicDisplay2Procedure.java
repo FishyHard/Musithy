@@ -8,7 +8,7 @@ public class RepeatMusicDisplay2Procedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new MusithyModVariables.PlayerVariables())).RepeatMusic == 1) {
+		if (entity.getData(MusithyModVariables.PLAYER_VARIABLES).RepeatMusic == 1) {
 			return true;
 		}
 		return false;

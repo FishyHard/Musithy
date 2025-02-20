@@ -1,10 +1,10 @@
 {
-  "type": "musithy:musithy_loot_modifier",
+  "type": "neoforge:add_table",
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
+      "condition": "neoforge:loot_table_id",
       "loot_table_id": "minecraft:chests/bastion_treasure"
     }
   ],
-  "lootTable": "musithy:nether_cassette_tapes_loot_table"
+  "table": "musithy:nether_cassette_tapes_loot_table"
 }

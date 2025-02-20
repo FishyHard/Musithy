@@ -1,28 +1,12 @@
 repositories {
 maven {
-  url = "https://maven.theillusivec4.top/"
+  url = "https://cursemaven.com"
   }
 }
 
 dependencies {
-  runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.4-5.1.5.2")
-  compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.19.4-5.1.5.2:api")
+  runtimeOnly "curse.maven:adorned-1036809:5740650"
+  compileOnly "curse.maven:adorned-1036809:5740650"
 }
-minecraft {
-  runs {
-     client {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
 
-      server {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
-      data {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
-  }
-}
 

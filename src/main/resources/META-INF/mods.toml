@@ -1,22 +1,24 @@
 modLoader="javafml"
-loaderVersion="[45,)"
+loaderVersion="[47,)"
 license="Mozilla Public License 2.0"
 
 [[mods]]
 modId="musithy"
 version="1.0.0"
 displayName="Musithy"
+displayURL="https://modrinth.com/project/musithy https://legacy.curseforge.com/minecraft/mc-mods/musithy"
 credits="Suluntulu"
-displayURL="https://mcreator.net"
 authors="FishyHard"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
 
 [[dependencies.musithy]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4]"
-    ordering="NONE"
+    versionRange="[1.20.1]"
+    ordering="AFTER"
     side="BOTH"
-
 
 
 [[dependencies.musithy]]
@@ -26,3 +28,6 @@ authors="FishyHard"
     ordering="NONE"
     side="BOTH"
 
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

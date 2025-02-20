@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class VBLHeadphonesRedRenderer implements ICurioRenderer {
-	private static final ResourceLocation TEXTURE = new ResourceLocation("musithy", "textures/entities/vbl_headphone_red.png");
+	private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath("musithy", "textures/entities/vbl_headphone_red.png");
 	private final Modelvbl_heapdhones model;
 
 	public VBLHeadphonesRedRenderer() {
@@ -36,7 +36,7 @@ public class VBLHeadphonesRedRenderer implements ICurioRenderer {
 		ICurioRenderer.rotateIfSneaking(matrixStack, entity);
 		this.model.prepareMobModel(entity, limbSwing, limbSwingAmount, partialTicks);
 		this.model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-		VertexConsumer vertexconsumer = ItemRenderer.getArmorFoilBuffer(renderTypeBuffer, RenderType.armorCutoutNoCull(TEXTURE), false, stack.hasFoil());
-		this.model.renderToBuffer(matrixStack, vertexconsumer, light, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+		VertexConsumer vertexconsumer = ItemRenderer.getArmorFoilBuffer(renderTypeBuffer, RenderType.armorCutoutNoCull(TEXTURE), false);
+		this.model.renderToBuffer(matrixStack, vertexconsumer, light, OverlayTexture.NO_OVERLAY);
 	}
 }

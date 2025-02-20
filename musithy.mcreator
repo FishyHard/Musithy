@@ -3,7 +3,6 @@
     {
       "name": "VBLHeadphones",
       "type": "curiosbauble",
-      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vbl_headphones",
@@ -19,7 +18,6 @@
     {
       "name": "VBLHeadphonesBlue",
       "type": "curiosbauble",
-      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vbl_headphones_blue",
@@ -35,7 +33,6 @@
     {
       "name": "VBLHeadphonesRed",
       "type": "curiosbauble",
-      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vbl_headphones_red",
@@ -51,7 +48,6 @@
     {
       "name": "VBLHeadphonesPurple",
       "type": "curiosbauble",
-      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vbl_headphones_purple",
@@ -67,7 +63,6 @@
     {
       "name": "VBLHeadphonesWhite",
       "type": "curiosbauble",
-      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vbl_headphones_white",
@@ -83,7 +78,6 @@
     {
       "name": "Headphones",
       "type": "tab",
-      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "headphones",
@@ -95,7 +89,6 @@
     {
       "name": "IEarPods",
       "type": "curiosbauble",
-      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "i_ear_pods",
@@ -111,7 +104,6 @@
     {
       "name": "BubbleEquippedTick",
       "type": "procedure",
-      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bubble_equipped_tick",
@@ -130,7 +122,6 @@
     {
       "name": "MusithyApp",
       "type": "gui",
-      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy_app",
@@ -145,7 +136,6 @@
     {
       "name": "MusithyOnKeyPressed",
       "type": "procedure",
-      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy_on_key_pressed",
@@ -159,7 +149,6 @@
     {
       "name": "Musithy",
       "type": "keybind",
-      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy",
@@ -172,7 +161,6 @@
     {
       "name": "PlayMusicButton",
       "type": "procedure",
-      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "play_music_button",
@@ -207,7 +195,6 @@
     {
       "name": "MusithyClose",
       "type": "procedure",
-      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy_close",
@@ -226,7 +213,6 @@
     {
       "name": "RetroBoomboxEntityShakingCondition",
       "type": "procedure",
-      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_entity_shaking_condition",
@@ -241,7 +227,6 @@
     {
       "name": "RetroBoombox",
       "type": "livingentity",
-      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox",
@@ -255,7 +240,6 @@
     {
       "name": "RetroBoomboxPlay",
       "type": "livingentity",
-      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_play",
@@ -269,7 +253,6 @@
     {
       "name": "RetroBoomboxPlayOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_play_on_entity_tick_update",
@@ -288,7 +271,6 @@
     {
       "name": "Boomboxes",
       "type": "tab",
-      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boomboxes",
@@ -300,7 +282,6 @@
     {
       "name": "RetroBoomboxItem",
       "type": "item",
-      "sortid": 17,
       "compiles": true,
       "locked_code": true,
       "registry_name": "retro_boombox_item",
@@ -314,7 +295,6 @@
     {
       "name": "RetroBoomboxItemRightclicked",
       "type": "procedure",
-      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_item_rightclicked",
@@ -349,7 +329,6 @@
     {
       "name": "RetroBoomboxRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_right_clicked_on_entity",
@@ -388,7 +367,6 @@
     {
       "name": "CassetteTapeG",
       "type": "item",
-      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_g",
@@ -402,7 +380,6 @@
     {
       "name": "CassetteTapes",
       "type": "tab",
-      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tapes",
@@ -414,7 +391,6 @@
     {
       "name": "CassetteTapeEnterThePortal",
       "type": "item",
-      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_enter_the_portal",
@@ -428,7 +404,6 @@
     {
       "name": "CassetteTapeDetermineYourFate",
       "type": "item",
-      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_determine_your_fate",
@@ -442,7 +417,6 @@
     {
       "name": "CassetteTapeMeetTheConductor",
       "type": "item",
-      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_meet_the_conductor",
@@ -456,7 +430,6 @@
     {
       "name": "CassetteTapeSundial3",
       "type": "item",
-      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_sundial_3",
@@ -470,7 +443,6 @@
     {
       "name": "CassetteTapeSundial4",
       "type": "item",
-      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cassette_tape_sundial_4",
@@ -484,7 +456,6 @@
     {
       "name": "RetroBoomboxPlayRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_play_right_clicked_on_entity",
@@ -523,7 +494,6 @@
     {
       "name": "LibraryButtonPress",
       "type": "procedure",
-      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_button_press",
@@ -542,7 +512,6 @@
     {
       "name": "CloseGUI",
       "type": "procedure",
-      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "close_gui",
@@ -561,7 +530,6 @@
     {
       "name": "LibraryDisplay",
       "type": "procedure",
-      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_display",
@@ -581,7 +549,6 @@
     {
       "name": "MusithyDisplay",
       "type": "procedure",
-      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy_display",
@@ -601,7 +568,6 @@
     {
       "name": "MusithyButtonPress",
       "type": "procedure",
-      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "musithy_button_press",
@@ -620,7 +586,6 @@
     {
       "name": "RepeatMusicDisplay",
       "type": "procedure",
-      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeat_music_display",
@@ -640,7 +605,6 @@
     {
       "name": "RepeatMusicDisplay2",
       "type": "procedure",
-      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeat_music_display_2",
@@ -660,7 +624,6 @@
     {
       "name": "RepeatMusicDisplay3",
       "type": "procedure",
-      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeat_music_display_3",
@@ -680,7 +643,6 @@
     {
       "name": "RepeatButton",
       "type": "procedure",
-      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeat_button",
@@ -699,13 +661,12 @@
     {
       "name": "RetroBoomboxRecipe",
       "type": "recipe",
-      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "retro_boombox_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/musithy/recipes/retro_boombox_recipe.json"
+          "src/main/resources/data/musithy/recipe/retro_boombox_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -713,7 +674,6 @@
     {
       "name": "CassetteTapesLootTable",
       "type": "loottable",
-      "sortid": 41,
       "compiles": true,
       "locked_code": true,
       "registry_name": "cassette_tapes_loot_table",
@@ -727,7 +687,6 @@
     {
       "name": "NetherCassetteTapesLootTable",
       "type": "loottable",
-      "sortid": 40,
       "compiles": true,
       "locked_code": true,
       "registry_name": "nether_cassette_tapes_loot_table",
@@ -741,7 +700,6 @@
     {
       "name": "Piglin",
       "type": "lootmodifier",
-      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "piglin",
@@ -755,7 +713,6 @@
     {
       "name": "NetherCassetteTapes",
       "type": "tab",
-      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nether_cassette_tapes",
@@ -767,7 +724,6 @@
     {
       "name": "BastionsNether",
       "type": "lootmodifier",
-      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bastions_nether",
@@ -781,7 +737,6 @@
     {
       "name": "EndCassetteTapesLootTable",
       "type": "loottable",
-      "sortid": 49,
       "compiles": true,
       "locked_code": true,
       "registry_name": "end_cassette_tapes_loot_table",
@@ -795,7 +750,6 @@
     {
       "name": "EndCassetteTapes",
       "type": "tab",
-      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "end_cassette_tapes",
@@ -807,7 +761,6 @@
     {
       "name": "EndCity",
       "type": "lootmodifier",
-      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "end_city",
@@ -821,7 +774,6 @@
     {
       "name": "Creeper",
       "type": "lootmodifier",
-      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "creeper",
@@ -835,7 +787,6 @@
     {
       "name": "Spawner",
       "type": "lootmodifier",
-      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spawner",
@@ -929,22 +880,28 @@
       "subtitle": ""
     }
   ],
+  "tag_elements": {},
+  "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.musithy.cassette_tape_enter_the_portal.description_0": "Cassette Tape - Enter The Portal by Suluntulu",
       "itemGroup.tabcassette_tapes": "Cassette Tapes",
       "item.musithy.i_ear_pods": "iEarPods",
       "item_group.musithy.headphones": "Headphones",
       "item.musithy.cassette_tape_enter_the_portal": "Cassette Tape",
       "item.musithy.vbl_headphones_blue": "VBL Headphones Blue",
       "item.musithy.cassette_tape_determine_your_fate": "Nether Cassette Tape",
-      "item.musithy.vbl_headphones_red": "VBL Headphones Red",
       "itemGroup.tabheadphones": "Headphones",
+      "item.musithy.vbl_headphones_red": "VBL Headphones Red",
       "item.musithy.retro_boombox_item": "Retro Boombox",
       "entity.musithy.retro_boombox": "Retro Boombox",
       "subtitles.sundial_4": "",
       "key.musithy.musithy": "Musithy",
+      "item.musithy.cassette_tape_g.description_0": "Cassette Tape - G by Suluntulu",
       "subtitles.test": "",
       "subtitles.sundial_3": "",
+      "item.musithy.cassette_tape_determine_your_fate.description_0": "Cassette Tape - Determine Your Fate by Suluntulu",
+      "item.musithy.cassette_tape_sundial_4.description_0": "Cassette Tape - Sundial IV by Suluntulu",
       "item.musithy.vbl_headphones": "VBL Headphones",
       "subtitles.g": "",
       "subtitles.determine_your_fate": "",
@@ -954,6 +911,7 @@
       "subtitles.meet_the_conductor": "",
       "item.musithy.cassette_tape_g": "Cassette Tape",
       "item_group.musithy.boomboxes": "Boomboxes",
+      "item.musithy.cassette_tape_meet_the_conductor.description_0": "Cassette Tape - Meet The Conductor by Suluntulu",
       "item_group.musithy.cassette_tapes": "Cassette Tapes",
       "entity.musithy.retro_boombox_play": "Retro Boombox",
       "item_group.musithy.end_cassette_tapes": "End Cassette Tapes",
@@ -963,7 +921,8 @@
       "item.musithy.vbl_headphones_white": "VBL Headphones White",
       "gui.musithy.musithy_app.label_library": "Library",
       "item.musithy.vbl_headphones_purple": "VBL Headphones Purple",
-      "item_group.musithy.nether_cassette_tapes": "Nether Cassette Tapes"
+      "item_group.musithy.nether_cassette_tapes": "Nether Cassette Tapes",
+      "item.musithy.cassette_tape_sundial_3.description_0": "Cassette Tape - Sundial III by Suluntulu"
     }
   },
   "foldersRoot": {
@@ -992,9 +951,8 @@
     "modName": "Musithy",
     "version": "1.0.0",
     "author": "FishyHard",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://modrinth.com/project/musithy https://legacy.curseforge.com/minecraft/mc-mods/musithy",
     "license": "Mozilla Public License 2.0",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
@@ -1002,10 +960,9 @@
     "mcreatorDependencies": [
       "curios_api"
     ],
-    "currentGenerator": "forge-1.19.4",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Suluntulu",
-    "modElementsPackage": "net.fishyhard.musithy",
-    "lockBaseModFiles": false
+    "modElementsPackage": "net.fishyhard.musithy"
   },
-  "mcreatorVersion": 202300336712
+  "mcreatorVersion": 202400452410
 }

@@ -9,11 +9,9 @@ public class LibraryButtonPressProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 1;
-			entity.getCapability(MusithyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.MusithyApp = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			MusithyModVariables.PlayerVariables _vars = entity.getData(MusithyModVariables.PLAYER_VARIABLES);
+			_vars.MusithyApp = 1;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }
