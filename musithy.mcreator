@@ -1,0 +1,1011 @@
+{
+  "mod_elements": [
+    {
+      "name": "VBLHeadphones",
+      "type": "curiosbauble",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vbl_headphones",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/vbl_headphones.json",
+          "src/main/java/net/fishyhard/musithy/client/renderer/VBLHeadphonesRenderer.java",
+          "src/main/java/net/fishyhard/musithy/item/VBLHeadphonesItem.java"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "VBLHeadphonesBlue",
+      "type": "curiosbauble",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vbl_headphones_blue",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/vbl_headphones_blue.json",
+          "src/main/java/net/fishyhard/musithy/item/VBLHeadphonesBlueItem.java",
+          "src/main/java/net/fishyhard/musithy/client/renderer/VBLHeadphonesBlueRenderer.java"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "VBLHeadphonesRed",
+      "type": "curiosbauble",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vbl_headphones_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/client/renderer/VBLHeadphonesRedRenderer.java",
+          "src/main/resources/assets/musithy/models/item/vbl_headphones_red.json",
+          "src/main/java/net/fishyhard/musithy/item/VBLHeadphonesRedItem.java"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "VBLHeadphonesPurple",
+      "type": "curiosbauble",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vbl_headphones_purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/item/VBLHeadphonesPurpleItem.java",
+          "src/main/java/net/fishyhard/musithy/client/renderer/VBLHeadphonesPurpleRenderer.java",
+          "src/main/resources/assets/musithy/models/item/vbl_headphones_purple.json"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "VBLHeadphonesWhite",
+      "type": "curiosbauble",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vbl_headphones_white",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/vbl_headphones_white.json",
+          "src/main/java/net/fishyhard/musithy/client/renderer/VBLHeadphonesWhiteRenderer.java",
+          "src/main/java/net/fishyhard/musithy/item/VBLHeadphonesWhiteItem.java"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "Headphones",
+      "type": "tab",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headphones",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "IEarPods",
+      "type": "curiosbauble",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "i_ear_pods",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/item/IEarPodsItem.java",
+          "src/main/java/net/fishyhard/musithy/client/renderer/IEarPodsRenderer.java",
+          "src/main/resources/assets/musithy/models/item/i_ear_pods.json"
+        ]
+      },
+      "path": "~/Headphones"
+    },
+    {
+      "name": "BubbleEquippedTick",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bubble_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/BubbleEquippedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusithyApp",
+      "type": "gui",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy_app",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/client/gui/MusithyAppScreen.java",
+          "src/main/java/net/fishyhard/musithy/world/inventory/MusithyAppMenu.java",
+          "src/main/java/net/fishyhard/musithy/network/MusithyAppButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "MusithyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/MusithyOnKeyPressedProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Musithy",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/network/MusithyMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "PlayMusicButton",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_music_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/PlayMusicButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusithyClose",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy_close",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/MusithyCloseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxEntityShakingCondition",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_entity_shaking_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RetroBoomboxEntityShakingConditionProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RetroBoombox",
+      "type": "livingentity",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/client/renderer/RetroBoomboxRenderer.java",
+          "src/main/java/net/fishyhard/musithy/entity/RetroBoomboxEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxPlay",
+      "type": "livingentity",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_play",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/entity/RetroBoomboxPlayEntity.java",
+          "src/main/java/net/fishyhard/musithy/client/renderer/RetroBoomboxPlayRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxPlayOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_play_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RetroBoomboxPlayOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Boomboxes",
+      "type": "tab",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boomboxes",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "RetroBoomboxItem",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "retro_boombox_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/retro_boombox_item.json",
+          "src/main/java/net/fishyhard/musithy/item/RetroBoomboxItemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxItemRightclicked",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RetroBoomboxItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RetroBoomboxRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapeG",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_g",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeGItem.java",
+          "src/main/resources/assets/musithy/models/item/cassette_tape_g.json"
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapes",
+      "type": "tab",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tapes",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "CassetteTapeEnterThePortal",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_enter_the_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeEnterThePortalItem.java",
+          "src/main/resources/assets/musithy/models/item/cassette_tape_enter_the_portal.json"
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapeDetermineYourFate",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_determine_your_fate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeDetermineYourFateItem.java",
+          "src/main/resources/assets/musithy/models/item/cassette_tape_determine_your_fate.json"
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapeMeetTheConductor",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_meet_the_conductor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/cassette_tape_meet_the_conductor.json",
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeMeetTheConductorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapeSundial3",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_sundial_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/cassette_tape_sundial_3.json",
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeSundial3Item.java"
+        ]
+      }
+    },
+    {
+      "name": "CassetteTapeSundial4",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cassette_tape_sundial_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/musithy/models/item/cassette_tape_sundial_4.json",
+          "src/main/java/net/fishyhard/musithy/item/CassetteTapeSundial4Item.java"
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxPlayRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_play_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RetroBoomboxPlayRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LibraryButtonPress",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_button_press",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/LibraryButtonPressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CloseGUI",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "close_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/CloseGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LibraryDisplay",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/LibraryDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusithyDisplay",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/MusithyDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusithyButtonPress",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musithy_button_press",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/MusithyButtonPressProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepeatMusicDisplay",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeat_music_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RepeatMusicDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepeatMusicDisplay2",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeat_music_display_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RepeatMusicDisplay2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepeatMusicDisplay3",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeat_music_display_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RepeatMusicDisplay3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RepeatButton",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeat_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/fishyhard/musithy/procedures/RepeatButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RetroBoomboxRecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "retro_boombox_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/recipes/retro_boombox_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CassetteTapesLootTable",
+      "type": "loottable",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "cassette_tapes_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_tables/entities/cassette_tapes.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "NetherCassetteTapesLootTable",
+      "type": "loottable",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "nether_cassette_tapes_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_tables/nether_cassette_tapes_loot_table.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "Piglin",
+      "type": "lootmodifier",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piglin",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_modifiers/piglin.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "NetherCassetteTapes",
+      "type": "tab",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_cassette_tapes",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "BastionsNether",
+      "type": "lootmodifier",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bastions_nether",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_modifiers/bastions_nether.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "EndCassetteTapesLootTable",
+      "type": "loottable",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "end_cassette_tapes_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_tables/end_cassette_tapes_loot_table.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "EndCassetteTapes",
+      "type": "tab",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_cassette_tapes",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
+    },
+    {
+      "name": "EndCity",
+      "type": "lootmodifier",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_city",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_modifiers/end_city.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "Creeper",
+      "type": "lootmodifier",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creeper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_modifiers/creeper.json"
+        ]
+      },
+      "path": "~/LootTables"
+    },
+    {
+      "name": "Spawner",
+      "type": "lootmodifier",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/musithy/loot_modifiers/spawner.json"
+        ]
+      },
+      "path": "~/LootTables"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "MusicPlaying",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "MusithyApp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RepeatMusic",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "gold_ingot_player",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "timer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "meet_the_conductor",
+      "files": [
+        "meet_the_conductor"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "enter_the_portal",
+      "files": [
+        "entertheportal"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sundial_4",
+      "files": [
+        "sundialiv"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "determine_your_fate",
+      "files": [
+        "determine_your_fate"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "sundial_3",
+      "files": [
+        "sundialiii"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "g",
+      "files": [
+        "g"
+      ],
+      "category": "record",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "itemGroup.tabcassette_tapes": "Cassette Tapes",
+      "item.musithy.i_ear_pods": "iEarPods",
+      "item_group.musithy.headphones": "Headphones",
+      "item.musithy.cassette_tape_enter_the_portal": "Cassette Tape",
+      "item.musithy.vbl_headphones_blue": "VBL Headphones Blue",
+      "item.musithy.cassette_tape_determine_your_fate": "Nether Cassette Tape",
+      "item.musithy.vbl_headphones_red": "VBL Headphones Red",
+      "itemGroup.tabheadphones": "Headphones",
+      "item.musithy.retro_boombox_item": "Retro Boombox",
+      "entity.musithy.retro_boombox": "Retro Boombox",
+      "subtitles.sundial_4": "",
+      "key.musithy.musithy": "Musithy",
+      "subtitles.test": "",
+      "subtitles.sundial_3": "",
+      "item.musithy.vbl_headphones": "VBL Headphones",
+      "subtitles.g": "",
+      "subtitles.determine_your_fate": "",
+      "item.musithy.cassette_tape_sundial_3": "Cassette Tape",
+      "item.musithy.cassette_tape_sundial_4": "Cassette Tape",
+      "item.musithy.cassette_tape_meet_the_conductor": "End Cassette Tape",
+      "subtitles.meet_the_conductor": "",
+      "item.musithy.cassette_tape_g": "Cassette Tape",
+      "item_group.musithy.boomboxes": "Boomboxes",
+      "item_group.musithy.cassette_tapes": "Cassette Tapes",
+      "entity.musithy.retro_boombox_play": "Retro Boombox",
+      "item_group.musithy.end_cassette_tapes": "End Cassette Tapes",
+      "subtitles.enter_the_portal": "",
+      "itemGroup.tabboomboxes": "Boomboxes",
+      "gui.musithy.musithy_app.button_playmusic": "PlayMusic",
+      "item.musithy.vbl_headphones_white": "VBL Headphones White",
+      "gui.musithy.musithy_app.label_library": "Library",
+      "item.musithy.vbl_headphones_purple": "VBL Headphones Purple",
+      "item_group.musithy.nether_cassette_tapes": "Nether Cassette Tapes"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Headphones",
+        "children": []
+      },
+      {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "LootTables",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "musithy",
+    "modName": "Musithy",
+    "version": "1.0.0",
+    "author": "FishyHard",
+    "websiteURL": "https://mcreator.net",
+    "license": "Mozilla Public License 2.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "curios_api"
+    ],
+    "currentGenerator": "forge-1.19.4",
+    "credits": "Suluntulu",
+    "modElementsPackage": "net.fishyhard.musithy",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300336712
+}

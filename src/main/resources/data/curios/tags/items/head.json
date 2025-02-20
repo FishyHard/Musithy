@@ -1,0 +1,12 @@
+{
+  "replace": "false",
+  "values": [
+    "minecraft:air",
+    "musithy:vbl_headphones_blue",
+    "musithy:vbl_headphones",
+    "musithy:vbl_headphones_red",
+    "musithy:vbl_headphones_purple",
+    "musithy:vbl_headphones_white",
+    "musithy:i_ear_pods"
+  ]
+}

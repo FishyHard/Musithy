@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Nether Cassette Tapes",
+    "icon": {
+      "value": "CUSTOM:CassetteTapeDetermineYourFate"
+    },
+    "showSearch": false
+  }
+}

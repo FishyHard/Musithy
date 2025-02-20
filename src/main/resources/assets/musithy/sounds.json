@@ -1,0 +1,50 @@
+{
+  "meet_the_conductor": {
+    "sounds": [
+      {
+        "name": "musithy:meet_the_conductor",
+        "stream": true
+      }
+    ]
+  },
+  "enter_the_portal": {
+    "sounds": [
+      {
+        "name": "musithy:entertheportal",
+        "stream": true
+      }
+    ]
+  },
+  "sundial_4": {
+    "sounds": [
+      {
+        "name": "musithy:sundialiv",
+        "stream": true
+      }
+    ]
+  },
+  "determine_your_fate": {
+    "sounds": [
+      {
+        "name": "musithy:determine_your_fate",
+        "stream": true
+      }
+    ]
+  },
+  "sundial_3": {
+    "sounds": [
+      {
+        "name": "musithy:sundialiii",
+        "stream": true
+      }
+    ]
+  },
+  "g": {
+    "sounds": [
+      {
+        "name": "musithy:g",
+        "stream": true
+      }
+    ]
+  }
+}

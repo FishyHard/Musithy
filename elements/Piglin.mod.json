@@ -1,0 +1,8 @@
+{
+  "_fv": 47,
+  "_type": "lootmodifier",
+  "definition": {
+    "modifiedTable": "minecraft:gameplay/piglin_bartering",
+    "modifierTable": "NetherCassetteTapesLootTable"
+  }
+}

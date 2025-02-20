@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Headphones",
+    "icon": {
+      "value": "CUSTOM:VBLHeadphones"
+    },
+    "showSearch": false
+  }
+}

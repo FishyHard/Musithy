@@ -1,0 +1,161 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 272,
+    "height": 175,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_repeat_invisible_button",
+          "image": "repeat_invisible_button.png",
+          "hoveredImage": "repeat_invisible_button.png",
+          "onClick": {
+            "name": "RepeatButton"
+          },
+          "x": 231,
+          "y": 188
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "musithyappguilibrary.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "LibraryDisplay"
+          },
+          "x": 77,
+          "y": 33
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "musithyappgui.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MusithyDisplay"
+          },
+          "x": 77,
+          "y": 33
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_play_button_gui",
+          "image": "play_button_gui.png",
+          "hoveredImage": "play_button_gui_hover.png",
+          "x": 205,
+          "y": 186
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_repeat_button",
+          "image": "repeat_button.png",
+          "hoveredImage": "repeat_button.png",
+          "displayCondition": {
+            "name": "RepeatMusicDisplay2"
+          },
+          "x": 231,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_repeat1_button",
+          "image": "repeat1_button.png",
+          "hoveredImage": "repeat1_button.png",
+          "displayCondition": {
+            "name": "RepeatMusicDisplay3"
+          },
+          "x": 231,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_norepeat_button",
+          "image": "norepeat_button.png",
+          "hoveredImage": "norepeat_button.png",
+          "displayCondition": {
+            "name": "RepeatMusicDisplay"
+          },
+          "x": 231,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_library_gui",
+          "image": "library_gui.png",
+          "hoveredImage": "library_gui_hover.png",
+          "onClick": {
+            "name": "LibraryButtonPress"
+          },
+          "displayCondition": {
+            "name": "MusithyDisplay"
+          },
+          "x": 85,
+          "y": 79
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_library",
+          "text": {
+            "fixedValue": "Library"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MusithyDisplay"
+          },
+          "x": 103,
+          "y": 83
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_invisible",
+          "image": "button_invisible.png",
+          "hoveredImage": "button_invisible.png",
+          "onClick": {
+            "name": "MusithyButtonPress"
+          },
+          "x": 85,
+          "y": 41
+        }
+      }
+    ],
+    "onTick": {
+      "name": "MusithyClose"
+    },
+    "onClosed": {
+      "name": "CloseGUI"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

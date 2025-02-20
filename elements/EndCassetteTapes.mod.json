@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "End Cassette Tapes",
+    "icon": {
+      "value": "CUSTOM:CassetteTapeMeetTheConductor"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Boomboxes",
+    "icon": {
+      "value": "CUSTOM:RetroBoomboxItem"
+    },
+    "showSearch": false
+  }
+}
